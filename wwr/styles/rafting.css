@@ -66,10 +66,9 @@ nav a {
     background-color: rgba(0, 0, 0, 0.5); /* Fundo escuro com opacidade */
     color: white;                             /* Cor do texto */
     padding: 15px;                              /* Espaçamento interno */
-    max-width: 400px;                           /* Largura máxima do article */
+    /*max-width: 400px;    */                       /* Largura máxima do article */
     z-index: 1;                                 /* Coloca o article acima da imagem */
-
-    width: 700px;                               /* Define a nova largura */
+    width: 800px;                               /* Define a nova largura */
     max-width: 80%; 
 }
 
