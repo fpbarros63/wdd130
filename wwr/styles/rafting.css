@@ -1,0 +1,111 @@
+:root {
+    --primary-color: #3A0334; /* Dark Purple */
+    --secondary-color: #440437; /* Bright Purple */
+    --accent-color: #EC0868; /* Pinkish Red */
+    --highlight-color: #ec7d10; /* Orange */
+}
+
+/* Headings with Roboto font */
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400; /* Heading font weight */
+    font-style: normal;
+    color: var(--primary-color);
+}
+
+/* Paragraphs with Roboto font */
+p {
+    font-family: "Roboto", sans-serif;
+    /* font-weight: 100;  Text font weight */
+    font-weight: bold;
+    font-style: normal;
+    color: var(--secondary-color);
+    line-height: 1.6;
+}
+
+nav a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.hero {
+    position: relative;         /* Permite o posicionamento absoluto dos filhos */
+    display: flex;              /* Usa flexbox para alinhamento */
+    justify-content: center;    /* Centraliza horizontalmente */
+    align-items: center;        /* Centraliza verticalmente */
+    height: 100%;               /* Garante que o contêiner pai tenha altura definida */
+}
+
+.hero img {
+    width: 100%;                /* Imagem ocupa toda a largura do container */
+    height: auto;
+    display: block;             /* Força a imagem a ser um bloco */
+}
+
+.hero h1 {
+    position: absolute;
+    top: 20px;                  /* Manter o título 20px do topo */
+    left: 50%;                  /* Posiciona à esquerda */
+    width: 100%;                /* Ocupa toda a largura do bloco */
+    display: flex;              /* Permite usar flexbox para centralizar o texto */
+    justify-content: center;    /* Centraliza horizontalmente */
+    transform: translateX(-50%);/* Ajusta o h1 para que seu centro esteja no meio do contêiner */
+    font-size: 3rem;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.3); /* Fundo escuro com opacidade */
+    z-index: 1;                             /* Coloca o h1 acima da imagem */
+}
+
+
+.hero article {
+    position: absolute;                         /* Permite o posicionamento dentro do contêiner pai */
+    top: 50%;                                   /* Move para 50% do contêiner pai */
+    left: 50%;                                  /* Move para 50% do contêiner pai */
+    transform: translate(-50%, -50%);           /* Ajusta para centralizar */
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo escuro com opacidade */
+    color: white;                             /* Cor do texto */
+    padding: 15px;                              /* Espaçamento interno */
+    max-width: 400px;                           /* Largura máxima do article */
+    z-index: 1;                                 /* Coloca o article acima da imagem */
+
+    width: 700px;                               /* Define a nova largura */
+    max-width: 80%; 
+}
+
+/* Float da imagem no article */
+.hero article img {
+    float: right;
+    margin: 10px 10px 10px 10px;
+    width: 150px;                               /* Ajuste a largura da imagem conforme necessário */
+}
+
+.hero article p {
+    /*font-weight: 100;*/
+    color: white;
+}
+
+body {
+    max-width: 1200px;                          /* Maximum width of the page */
+    margin: 0 auto;                             /* Center the page horizontally */
+    padding: 20px;                              /* Optional padding to avoid content touching the edges */
+}
+
+footer a {
+    text-decoration: none;                      /* Removes underline from all links in the footer */
+}
+
+footer a:hover {
+    text-decoration: none;                      /* No underline on hover */
+}
+
+footer nav a img {
+    width: 30px;                                /* Tamanho dos ícones de mídia social */
+    margin: 0 10px;
+}
+
+.photo-description {
+    margin-top: 0px;                            /* Espaçamento acima da descrição */
+    font-size: 14px;                            /* Tamanho da fonte da descrição */
+    color: #333;                              /* Cor do texto da descrição */
+}
