@@ -32,7 +32,7 @@ header {
     grid-template-columns: auto 1fr auto; /* Layout em 3 colunas: logo, espaço flexível e navegação */
     align-items: center;
     padding: 20px 40px;
-    background-color: #e6e6fa; /* var(--primary-color); Fundo azul */ #e6e6fa; /* Matches the light purple background from the sketch */
+    background-color: #e6e6fa; /* var(--primary-color); Fundo azul */ 
     color: var(--secondary-color); /* Texto branco */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para profundidade */
 }
