@@ -1,8 +1,50 @@
+/* Reset básico para garantir consistência */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 :root {
-    --primary-color: #3A0334; /* Dark Purple */
-    --secondary-color: #440437; /* Bright Purple */
-    --accent-color: #EC0868; /* Pinkish Red */
-    --highlight-color: #ec7d10; /* Orange */
+    --primary-color: #4a90e2; /* Cor de destaque (azul) para o site */
+    --secondary-color: #fff; /* Cor secundária (branca) */
+    --hover-color: #ffdd57; /* Cor de hover (amarelo vibrante) */
+}
+/*
+:root {
+    --primary-color: #3A0334;  Dark Purple 
+    --secondary-color: #440437;  Bright Purple 
+    --accent-color: #EC0868;  Pinkish Red 
+    --highlight-color: #ec7d10;  Orange 
+}
+*/
+
+header {
+    display: grid;
+    grid-template-columns: auto 1fr auto; /* Three columns: logo, space, navigation */
+    align-items: center; /* Aligns items vertically */
+    padding: 20px;
+    background-color: #e6e6fa; /* Matches the light purple background from the sketch */
+}
+
+/* Estilizando o Header */
+header {
+    display: grid;
+    grid-template-columns: auto 1fr auto; /* Layout em 3 colunas: logo, espaço flexível e navegação */
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #e6e6fa; /* var(--primary-color); Fundo azul */ #e6e6fa; /* Matches the light purple background from the sketch */
+    color: var(--secondary-color); /* Texto branco */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para profundidade */
+}
+
+.logo-box {
+    grid-column: 1; /* Places the logo in the first column */
+}
+
+/* Estilo para o logo no header */
+.logo-box img {
+    max-height: 150px; /* Mantém o tamanho consistente */
+    width: auto;
 }
 
 /* Headings with Roboto font */
@@ -23,10 +65,30 @@ p {
     line-height: 1.6;
 }
 
+/* Estilizando a barra de navegação */
+nav {
+    display: flex;
+    grid-column: 3; /* Places the navigation in the third column */
+    justify-content: flex-end; /* Alinha a navegação à direita */
+}
+
 nav a {
-    color: var(--secondary-color);
+    margin-left: 20px;
+    padding: 10px 15px;
     text-decoration: none;
-    margin: 0 10px;
+    color: #333; 
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    border: 2px solid transparent; /* Bordas sutis para hover */
+    transition: border 0.3s, color 0.3s; /* Transição suave para hover */
+}
+
+
+
+nav a:hover {
+    color: var(--hover-color); /* Amarelo vibrante no hover */
+    border: 2px solid var(--secondary-color); /* Borda branca no hover */
+    border-radius: 5px; /* Bordas arredondadas */
 }
 
 .hero {
@@ -84,11 +146,175 @@ nav a {
     color: white;
 }
 
+
+
 body {
     max-width: 1200px;                          /* Maximum width of the page */
     margin: 0 auto;                             /* Center the page horizontally */
     padding: 20px;                              /* Optional padding to avoid content touching the edges */
 }
+
+/* Seção History */
+section.history {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr; /* Três colunas: texto, imagem, texto */
+    gap: 20px; /* Espaçamento entre as colunas */
+    align-items: center;
+    padding: 20px;
+    background-color: #e6e6fa; /* Fundo claro para contraste */
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+.history h2 {
+    grid-column: 1 / -1; /* O cabeçalho ocupa a largura total da seção */
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.history img {
+    max-width: 100%; /* A imagem se ajusta à coluna central */
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.history p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: #333;
+    line-height: 1.6;
+}
+
+.history .column {
+    padding: 10px;
+}
+
+/* Estilo para a seção Adventures */
+/* Estilo para a seção Adventures */
+section.adventures {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    background-color: #e6e6fa;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Centraliza o texto do título */
+}
+
+/* Estilo para o título da seção */
+section.adventures h2 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Container para as imagens de aventura */
+.adventure-images {
+    display: flex;
+    justify-content: space-around; /* Espaçamento uniforme entre as figuras */
+    flex-wrap: wrap; /* Permite que as figuras se movam para a próxima linha se necessário */
+}
+
+/* Estilo para os elementos figure */
+figure {
+    margin: 10px; /* Margem entre figuras */
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Centraliza o conteúdo do figure */
+    flex: 1 1 calc(20% - 20px); /* Flexível para ocupar espaço igual */
+}
+
+/* Estilo para as imagens */
+figure img {
+    width: 100%; /* A imagem ocupa toda a largura do figure */
+    height: auto; /* Mantém a proporção da imagem */
+    display: block; /* Garante que a imagem seja tratada como bloco */
+}
+
+/* Estilo para o figcaption */
+
+figcaption {
+    background-color: #222;
+    color: #fff;
+    font: italic smaller sans-serif;
+    padding: 3px;
+    text-align: center;
+  }
+
+  footer {
+    background-color: #e6e6fa; /* Cor de fundo, semelhante ao seu wireframe */
+    padding: 20px; /* Espaçamento interno */
+    display: flex; /* Usando flexbox para alinhar o conteúdo */
+    justify-content: space-between; /* Espaça o conteúdo horizontalmente */
+    align-items: center; /* Alinha verticalmente no centro */
+}
+
+/* Estilo para o texto do rodapé */
+footer p {
+    margin: 0; /* Remove margem do parágrafo */
+    color: #333; /* Cor do texto */
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+/* Estilo para os links de redes sociais */
+.sociallinks {
+    display: flex; /* Flexbox para alinhar ícones em linha */
+    gap: 15px; /* Espaçamento entre ícones */
+}
+
+/* Estilo para os ícones das redes sociais */
+.sociallinks img {
+    width: 30px; /* Largura dos ícones */
+    height: 30px; /* Altura dos ícones */
+    display: block; /* Garante que o ícone é tratado como bloco */
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    header {
+        grid-template-columns: auto 1fr; /* Only two columns on mobile */
+    }
+
+    nav {
+        justify-content: center; /* Center navigation links on smaller screens */
+    }
+
+    .logo-box img {
+        max-height: 50px; /* Smaller logo for mobile */
+    }
+
+    section.history {
+        grid-template-columns: 1fr; /* Para telas pequenas, uma única coluna */
+    }
+
+    .history img {
+        max-width: 70%;
+        margin: 0 auto; /* Centraliza a imagem */
+    }
+
+    .history p {
+        text-align: center; /* Centraliza o texto em telas menores */
+    }
+
+    .adventure-images {
+        flex-direction: column; /* Empilha as figuras verticalmente */
+        align-items: center; /* Centraliza as figuras */
+    }
+    figure {
+        width: 90%; /* Ajusta a largura quando empilhadas */
+    }
+}
+
+
+
+
 
 footer a {
     text-decoration: none;                      /* Removes underline from all links in the footer */
