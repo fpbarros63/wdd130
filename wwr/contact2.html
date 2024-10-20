@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Page</title>
+    <meta name="description" content="Contact home page">
+    <meta name="author" content="Francisco de Paula Barros">
+    <link rel="stylesheet" href="styles/contact2.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo-box">
+            <img src="images/rafinglogo.png" alt="Logo">
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="trips.html">Trips</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <!-- Seção de informações de contato -->
+            <div class="contact-info">
+                <h1>Contact Us</h1>
+                <h2>Get in touch</h2>
+                <p>We love questions and feedback – and we're always happy to help!</p>
+
+                <div class="details">
+                    <div>
+                        <div class="icon">
+                            <img src="images/email_icon.png" alt="Email Icon">
+                        </div>
+                        <span>Email: <a href="mailto:contact@company.com">contact@company.com</a></span>
+                    </div>
+                    <div style="margin-top: 10px;">
+                        <div class="icon">
+                            <img src="images/phone_icon.png" alt="Phone Icon">
+                        </div>
+                        <span>Phone: (123) 123-3213-23</span>
+                    </div>
+                </div>
+
+                <!-- Mapa Google incorporado -->
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3923.365751298569!2d-77.26537168573455!3d-3.958273889632404!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91cb7f19634a98f3%3A0x3fb8c13986ea64d6!2sSanta%20Mar%C3%ADa%20de%20Nieva!5e0!3m2!1sen!2spe!4v1601512354653!5m2!1sen!2spe" 
+                    loading="lazy"></iframe>
+
+            </div>
+
+            <!-- Formulário de contato -->
+            <div class="contact-form">
+                <form action="#">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your name">
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Your email address">
+
+                    <label for="company">Company (optional)</label>
+                    <input type="text" id="company" name="company" placeholder="Company name">
+
+                    <label for="message">Leave us a message</label>
+                    <textarea id="message" name="message" placeholder="Write your message here..." rows="5"></textarea>
+
+                    <!-- Captcha placeholder -->
+                    <div class="captcha">
+                        <input type="checkbox" id="robot-check">
+                        <label for="robot-check">
+                            I'm not a robot
+                            <img src="images/captcha_icon.svg" alt="Captcha icon" class="captcha-icon">
+                        </label>
+                    </div>
+
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>©2024 ⚓️ Freedom Rafting ⚓️ Francisco de Paula Barros</p>
+        <nav class="sociallinks">
+            <a href="http://facebook.com">
+                <img src="images/facebook_icon.svg" alt="Facebook">
+            </a>
+            <a href="http://twitter.com">
+                <img src="images/twitter_icon.svg" alt="Twitter">
+            </a>
+            <a href="http://instagram.com">
+                <img src="images/instagram_icon.svg" alt="Instagram">
+            </a>
+        </nav>
+    </footer>
+</body>
+</html>

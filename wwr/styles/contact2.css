@@ -1,0 +1,347 @@
+/* Estilos básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --primary-color: #4a90e2; /* Cor de destaque (azul) para o site */
+    --secondary-color: #fff; /* Cor secundária (branca) */
+    --hover-color: #ffdd57; /* Cor de hover (amarelo vibrante) */
+}
+/*
+:root {
+    --primary-color: #3A0334;  Dark Purple 
+    --secondary-color: #440437;  Bright Purple 
+    --accent-color: #EC0868;  Pinkish Red 
+    --highlight-color: #ec7d10;  Orange 
+}
+*/
+
+header {
+    display: grid;
+    grid-template-columns: auto 1fr auto; /* Three columns: logo, space, navigation */
+    align-items: center; /* Aligns items vertically */
+    padding: 20px;
+    background-color: #e6e6fa; /* Matches the light purple background from the sketch */
+}
+
+/* Estilizando o Header */
+header {
+    display: grid;
+    grid-template-columns: auto 1fr auto; /* Layout em 3 colunas: logo, espaço flexível e navegação */
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #e6e6fa; /* var(--primary-color); Fundo azul */ 
+    color: var(--secondary-color); /* Texto branco */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para profundidade */
+}
+
+.logo-box {
+    grid-column: 1; /* Places the logo in the first column */
+}
+
+/* Estilo para o logo no header */
+.logo-box img {
+    max-height: 150px; /* Mantém o tamanho consistente */
+    width: auto;
+}
+
+/* Headings with Roboto font */
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400; /* Heading font weight */
+    font-style: normal;
+    color: var(--primary-color);
+}
+
+/* Paragraphs with Roboto font */
+p {
+    font-family: "Roboto", sans-serif;
+    /* font-weight: 100;  Text font weight */
+    font-weight: bold;
+    font-style: normal;
+    color: var(--secondary-color);
+    line-height: 1.6;
+}
+
+/* Estilizando a barra de navegação */
+nav {
+    display: flex;
+    grid-column: 3; /* Places the navigation in the third column */
+    justify-content: flex-end; /* Alinha a navegação à direita */
+}
+
+nav a {
+    margin-left: 20px;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #333; 
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    border: 2px solid transparent; /* Bordas sutis para hover */
+    transition: border 0.3s, color 0.3s; /* Transição suave para hover */
+}
+
+nav a:hover {
+    color: var(--hover-color); /* Amarelo vibrante no hover */
+    border: 2px solid var(--secondary-color); /* Borda branca no hover */
+    border-radius: 5px; /* Bordas arredondadas */
+}
+
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+/* Container principal */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end; /* Alinha os itens pela parte inferior */
+    margin: 40px;
+}
+
+/* Seção de contato (à esquerda) */
+.contact-info {
+    width: 50%;
+    padding: 20px;
+}
+
+.contact-info h1 {
+    color: #3D0FFF;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.contact-info h2 {
+    font-size: 3rem;
+    margin: 10px 0;
+}
+
+.contact-info p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.contact-info .details {
+    margin-bottom: 20px;
+}
+
+/* Estilo para os detalhes de contato */
+.details div {
+    display: flex;           /* Coloca o ícone e o texto na mesma linha */
+    align-items: center;     /* Garante o alinhamento vertical */
+    margin-bottom: 10px;     /* Espaçamento entre as linhas de contato */
+}
+
+.details .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;               /* Largura da área para o ícone */
+    height: 30px;              /* Altura da área para o ícone */
+    background-color: #f1f1f1; /* Fundo claro */
+    border-radius: 50%;        /* Deixa o fundo circular */
+    margin-right: 10px;
+}
+
+.details .icon img {
+    width: 20px;               /* Ajusta a largura da imagem */
+    height: 20px;              /* Ajusta a altura da imagem */
+    object-fit: contain;       /* Garante que a imagem se encaixe dentro do círculo */
+}
+
+
+
+
+.details span {
+    display: inline-block;
+    margin-left: 10px;
+    vertical-align: middle;
+}
+
+/* Seção de formulário (à direita) */
+.contact-form {
+    width: 45%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.contact-form input:hover,
+.contact-form textarea:hover {
+    border-color: var(--primary-color); /* Cor de borda ao passar o mouse */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra para dar um efeito de destaque */
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none; /* Remove o contorno padrão */
+    border-color: var(--primary-color); /* Cor da borda ao focar no campo */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra adicional ao focar */
+}
+
+
+
+
+
+.contact-form button {
+    background-color: #6a0dad;
+    color: white;
+    padding: 15px;
+    border: none;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #580da0;
+}
+
+/* Ajustes no CAPTCHA */
+.captcha {
+    display: flex;
+    justify-content: center; /* Centraliza o conjunto */
+    align-items: center; /* Alinha verticalmente */
+    margin: 15px 0;
+}
+
+.captcha input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px; /* Espaçamento entre o checkbox e a frase */
+    cursor: pointer;
+}
+
+.captcha label {
+    display: flex;
+    align-items: center;
+    font-family: "Roboto", sans-serif;
+    font-size: 1rem;
+    color: #333;
+}
+
+.captcha img.captcha-icon {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px; /* Espaçamento entre a frase e o ícone */
+}
+
+/* Estilo para o mapa */
+iframe {
+    width: 50%;
+    height: 300px;
+    border: none;
+    margin: 20px 0;
+}
+
+/* Ajuste para o iframe do Google Maps */
+.contact-info iframe {
+    align-self: flex-end; /* Garante que o iframe também alinhe com a parte inferior */
+}
+/* Ajustes no botão "Send Message" */
+.contact-form button {
+    background-color: #6a0dad;
+    color: white;
+    padding: 15px;
+    border: none;
+    width: 60%; /* Definir uma largura menor, por exemplo, 60% */
+    border-radius: 5px;
+    font-size: 1.1rem; /* Tamanho da fonte */
+    cursor: pointer;
+    margin-top: 20px; /* Espaçamento entre o botão e o checkbox */
+    display: block;
+    margin-left: auto;
+    margin-right: auto; /* Centralizar o botão */
+}
+
+.contact-form button:hover {
+    background-color: #580da0;
+}
+
+
+
+/* Ajustes no frame "I'm not a robot" */
+.captcha {
+    display: flex;
+    align-items: center;
+    margin: 20px 0; /* Espaçamento entre o captcha e os outros elementos */
+}
+
+.captcha input[type="checkbox"] {
+    margin-right: 10px; /* Espaçamento entre o checkbox e o texto */
+}
+
+.captcha label {
+    font-size: 1rem;
+    color: #333;
+}
+
+
+
+
+footer {
+    background-color: #e6e6fa; /* Cor de fundo, semelhante ao seu wireframe */
+    padding: 20px; /* Espaçamento interno */
+    display: flex; /* Usando flexbox para alinhar o conteúdo */
+    justify-content: space-between; /* Espaça o conteúdo horizontalmente */
+    align-items: center; /* Alinha verticalmente no centro */
+}
+
+/* Estilo para o texto do rodapé */
+footer p {
+    margin: 0; /* Remove margem do parágrafo */
+    color: #333; /* Cor do texto */
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+/* Estilo para os links de redes sociais */
+.sociallinks {
+    display: flex; /* Flexbox para alinhar ícones em linha */
+    gap: 15px; /* Espaçamento entre ícones */
+}
+
+/* Estilo para os ícones das redes sociais */
+.sociallinks img {
+    width: 30px; /* Largura dos ícones */
+    height: 30px; /* Altura dos ícones */
+    display: block; /* Garante que o ícone é tratado como bloco */
+}
+
+
+
+footer a {
+    text-decoration: none;                      /* Removes underline from all links in the footer */
+}
+
+footer a:hover {
+    text-decoration: none;                      /* No underline on hover */
+}
+
+footer nav a img {
+    width: 30px;                                /* Tamanho dos ícones de mídia social */
+    margin: 0 10px;
+}

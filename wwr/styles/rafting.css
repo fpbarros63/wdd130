@@ -247,7 +247,7 @@ figcaption {
     text-align: center;
   }
 
-  footer {
+footer {
     background-color: #e6e6fa; /* Cor de fundo, semelhante ao seu wireframe */
     padding: 20px; /* Espaçamento interno */
     display: flex; /* Usando flexbox para alinhar o conteúdo */
