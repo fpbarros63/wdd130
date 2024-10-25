@@ -105,6 +105,18 @@ h1 {
     text-align: center;
 }
 
+.hero h2 {
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2rem;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    text-align: center;
+}
+
 /* Article inside Hero */
 .hero article {
     position: absolute;
@@ -270,7 +282,8 @@ figcaption {
     border-radius: 10px;
     align-self: flex-start;
     justify-self: end;
-    height: auto; /* Ajusta a altura conforme o conteúdo */
+    height: calc(100vh - 200px);
+    /* height: auto;  Ajusta a altura conforme o conteúdo */
     padding: 10px; /* Reduz o espaçamento interno */
 }
 
