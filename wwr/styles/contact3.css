@@ -1,4 +1,3 @@
-/* Reset básico */
 * {
     margin: 0;
     padding: 0;
@@ -19,14 +18,6 @@ html, body {
     font-size: 18px;
     line-height: 1.6;
     font-family: 'Roboto', sans-serif;
-}
-
-.container {
-    display: grid; /* Usaremos grid para controle preciso */
-    grid-template-columns: 2fr 1fr; /* 2/3 para as informações + mapa, 1/3 para o formulário */
-    gap: 20px; /* Espaçamento entre as colunas */
-    height: calc(100vh - 120px); /* Altura disponível menos header e footer */
-    padding: 20px;
 }
 
 header {
@@ -68,63 +59,12 @@ h1 {
     color: var(--primary-color);
 }
 
-/* Hero Section */
-.hero {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: calc(100vh - 60px);
-}
-
-.hero img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.hero h1 {
-    position: absolute;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 3rem;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.3);
-    padding: 10px;
-    text-align: center;
-}
-
-/* Article inside Hero */
-.hero article {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    gap: 15px;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 15px;
-    max-width: 60%;
-    border-radius: 8px;
-}
-
-.hero article p {
-    flex: 1;
-    color: white;
-}
-
-.hero article img.article-img {
-    width: 150px;
-    border-radius: 8px;
-}
-
 /* Layout Principal */
 .container {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 20px;
-    height: calc(100vh - 160px);
+    display: grid; /* Usaremos grid para controle preciso */
+    grid-template-columns: 2fr 1fr; /* 2/3 para as informações + mapa, 1/3 para o formulário */
+    gap: 20px; /* Espaçamento entre as colunas */
+    height: calc(100vh - 160px); /* Altura disponível menos header e footer */
     padding: 20px;
     background-color: #cebbd1;
 }
@@ -133,49 +73,17 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-left: 30px;
+    margin-left: 30px; /* Ajuste o valor conforme necessário */
 }
 
-/* Seções History */
-section.history {
-    padding: 20px;
-    background-color: #b39cb8;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-.history {
-    display: grid;
-    grid-template-columns: 1fr auto 1fr;
-    gap: 20px;
-    align-items: center;
-}
-
-.history h2 {
-    grid-column: 1 / -1;
-    margin-bottom: 20px;
-}
-
-.history img {
-    width: 100%;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* Seção Adventures */
-section.adventures {
-    padding: 20px;
-    background-color: #cebbd1;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
+/* Seção das Imagens da Equipe */
 .class-images {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     gap: 10px;
 }
+
 
 figure {
     width: calc(33.33% - 10px);
@@ -190,6 +98,7 @@ figure img {
     border: none;
 }
 
+/* Estilo da Legenda Sobreposta */
 figcaption {
     background-color: #222;
     color: #fff;
@@ -204,17 +113,18 @@ figcaption {
 /* Seção de Contato */
 .contact-details {
     display: flex;
-    gap: 20px;
+    gap: 20px; /* Espaçamento entre informações e mapa */
     align-items: flex-start;
     margin-top: 50px;
 }
 
+/* Informações de Contato */
 .contact-info-wrapper {
     flex: 1;
     display: flex;
+    margin-left: 50px; /* Margem à esquerda */
     flex-direction: column;
     gap: 15px;
-    margin-left: 50px;
 }
 
 .contact-info {
@@ -229,29 +139,33 @@ figcaption {
     object-fit: contain;
 }
 
-.contact-info p, 
+/* Estilo para Informações de Contato */
+.contact-info p {
+    color: black; /* Define a cor do texto como preta */
+    font-weight: bold; /* Opcional: Aumenta a espessura para melhor legibilidade */
+}
+
 .contact-info a {
-    color: black;
-    font-weight: bold;
-    text-decoration: none;
+    color: black; /* Define a cor do link do email como preto */
+    text-decoration: none; /* Remove o sublinhado do link */
 }
 
 .contact-info a:hover {
-    text-decoration: underline;
+    text-decoration: underline; /* Opcional: Adiciona sublinhado ao passar o mouse */
 }
 
 /* Mapa */
 .map-iframe {
     flex: 1;
     height: 300px;
-    margin-left: 190px;
+    margin-left: 190px; /* Margem à esquerda */
     border: 0;
     border-radius: 10px;
 }
 
 /* Formulário Alinhado à Direita */
 .form-section {
-    width: 80%;
+    width: 80%; /* Aumente para 40% ou mais, se necessário */
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -259,37 +173,44 @@ figcaption {
     background-color: #f4eff5;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
-    align-self: flex-start;
-    justify-self: end;
+    height: auto; /* Ajusta a altura conforme o conteúdo */
+    align-self: flex-start; /* Alinha no topo */
+    justify-self: end; /* Alinha o formulário à extrema direita */
 }
 
 .contact-form {
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
 
-.contact-form input, 
+.contact-form textarea {
+    width: 100%;        /* Garante que a caixa ocupe toda a largura do formulário */
+    height: 150px;       /* Aumenta a altura */
+    padding: 12px;       /* Adiciona espaço interno para o texto */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    resize: vertical;    /* Permite que o usuário ajuste a altura se quiser */
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;     /* Ajusta o tamanho da fonte para legibilidade */
+}
+
+.contact-form input,
 .contact-form textarea {
     width: 100%;
     padding: 12px;
     border: 1px solid #ddd;
     border-radius: 5px;
-    font-family: 'Roboto', sans-serif;
-    font-size: 1rem;
 }
 
-.contact-form textarea {
-    height: 150px;
-    resize: vertical;
-}
-
+/* Estilo para o Checkbox */
 input[type="checkbox"] {
-    width: 20px;
-    height: 20px;
-    transform: scale(1.2);
-    margin-right: 8px;
-    cursor: pointer;
+    width: 20px; /* Largura ajustada */
+    height: 20px; /* Altura ajustada */
+    transform: scale(1.2); /* Aumenta proporcionalmente de forma sutil */
+    margin-right: 8px; /* Espaço entre o checkbox e o texto */
+    cursor: pointer; /* Mostra a mãozinha ao passar sobre */
 }
 
 .contact-form button {
@@ -307,11 +228,11 @@ input[type="checkbox"] {
 }
 
 .form-footer {
-    margin-top: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
+    margin-top: 15px; /* Reduz o espaço entre o formulário e o rodapé do formulário */
+    display: flex;              /* Utiliza Flexbox para alinhar os itens */
+    justify-content: center;     /* Centraliza os itens horizontalmente */
+    align-items: center;         /* Centraliza os itens verticalmente */
+    gap: 10px;                   /* Espaçamento opcional entre os itens */
 }
 
 /* Footer */
