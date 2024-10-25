@@ -303,7 +303,7 @@ figcaption {
 
 .contact-form input,
 .contact-form textarea {
-    margin-bottom: 20px; /* Reduz a margem entre os campos de entrada */
+    margin-bottom: 15px; /* Reduz a margem entre os campos de entrada */
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
