@@ -19,24 +19,34 @@ html, body {
     font-size: 18px;
     line-height: 1.6;
     font-family: 'Roboto', sans-serif;
+    padding-top: 40px; /* Compensa a altura do header fixo */
 }
 
 .container {
-    display: grid; /* Usaremos grid para controle preciso */
-    grid-template-columns: 2fr 1fr; /* 2/3 para as informações + mapa, 1/3 para o formulário */
-    gap: 20px; /* Espaçamento entre as colunas */
-    height: calc(100vh - 100px); /* Altura disponível menos header e footer */
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    height: calc(100vh - 160px);
     padding: 20px;
+    background-color: #cebbd1;
+    padding-top: 80px; /* Compensa a altura do header fixo */
 }
 
 header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
     display: grid;
     grid-template-columns: auto 1fr auto;
     align-items: center;
     padding: 10px 20px;
     background-color: #b39cb8;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    height: 80px; /* Defina explicitamente a altura do header */
 }
+
 
 header nav {
     display: flex;
