@@ -382,8 +382,9 @@ input[type="checkbox"] {
 }
 
 .description p {
+    font-size: 0.9rem;  /* Diminui o tamanho do texto dos parágrafos */
     margin-bottom: 10px;
-    line-height: 1.8;
+    line-height: 1.4;
     color: #666;
 }
 
@@ -393,15 +394,24 @@ input[type="checkbox"] {
     justify-content: space-around;
     width: 90%;
     margin: 0 auto;
+    margin-top: 30px;
     max-width: 1300px;
     gap: 20px;
     margin-top: 30px;
 }
 
 .feature {
-    text-align: left;
+    display: flex;
     max-width: 400px;
-    margin: 0 5px; /* Reduz o espaçamento lateral entre cada feature */
+    flex-direction: column;
+    align-items: flex-start; /* Alinha o conteúdo à esquerda */
+    text-align: left;
+}
+.feature-header {
+    display: flex;
+    align-items: center; /* Garante que o ícone e o título fiquem na mesma linha */
+    gap: 10px; /* Espaçamento entre o ícone e o título */
+    margin-bottom: 10px; /* Espaço entre o título e o parágrafo */
 }
 
 .feature img {
