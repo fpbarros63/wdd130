@@ -290,8 +290,6 @@ figcaption {
     border-radius: 10px;
     align-self: flex-start;
     justify-self: end;
-    /*height: calc(100vh - 250px);
-     height: auto;  Ajusta a altura conforme o conteúdo */
     padding: 10px; /* Reduz o espaçamento interno */
 }
 
@@ -430,6 +428,55 @@ input[type="checkbox"] {
     line-height: 1.6;
 }
 
+
+.emotion {
+    background-image: url('../images/backgraud.jpg'); /* Imagem de fundo */
+    background-size: cover; /* Faz a imagem cobrir toda a área */
+    background-position: center; /* Centraliza a imagem */
+    background-attachment: fixed; /* Fixa a imagem no fundo */
+    background-repeat: no-repeat; /* Evita repetição da imagem */
+    height: 100vh; /* Define a altura como 100% da tela */
+    display: flex; /* Centraliza conteúdo interno se necessário */
+    flex-direction: column;
+    justify-content: center; /* Centraliza verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
+    color: white; /* Texto branco para contraste */
+    text-align: center;
+    padding: 20px;
+}
+
+.emotion-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.emotion-content h2 {
+    font-size: 1.5rem;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.emotion-content p {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+    font-size: 1rem;
+    margin-bottom: 30px;
+}
+
+.emotion-gallery {
+    margin-top: 60px;
+}
+
+.emotion-gallery img {
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+    border-radius: 50%; /* Transformar imagens em círculo */
+    object-fit: cover; /* Garante que a imagem se ajuste sem distorção */
+}
+
 /* Footer */
 footer {
     background-color: #b39cb8;
@@ -471,5 +518,18 @@ footer p {
 
     figure {
         width: 90%;
+    }
+
+    .features {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature {
+        max-width: 80%;
+    }
+
+    .emotion-gallery {
+        flex-direction: column; /* Coloca as imagens em coluna */
     }
 }
